@@ -1,0 +1,54 @@
+// Mixin for larger screens (desktops, tablets)
+@mixin larger-screen {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Mixin for smaller screens (mobile phones)
+@mixin smaller-screen {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+.job-title {
+  color: #48df92;
+}
+.job-description {
+  color: white;
+  margin-top: 20px;
+}
+
+::ng-deep {
+  .p-carousel-indicators {
+    visibility: hidden;
+  }
+  .p-carousel {
+    margin-left: 400px;
+    max-width: 66vw;
+    @include smaller-screen {
+    }
+  }
+  .p-element .p-icon-wrapper {
+    color: white;
+    scale: 2;
+  }
+  .p-component {
+    span.highlighted {
+      color: #48df92;
+    }
+  }
+  .p-carousel-item-active {
+    min-height: 500px;
+  }
+
+  @include smaller-screen {
+    .p-carousel-item-active {
+      height: 73vh;
+    }
+    .p-carousel-items-content {
+      min-width: 18vh;
+    }
+  }
+}

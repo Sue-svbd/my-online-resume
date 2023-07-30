@@ -1,0 +1,32 @@
+<div class="card">
+  <!-- <h1 class="header-title" style="color: white">Experience</h1> -->
+
+  <div class="carousel-container">
+    <p-carousel
+      [value]="jobs"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="false"
+      [responsiveOptions]="responsiveOptions"
+      orientation="vertical"
+      [verticalViewPortHeight]="carouselHeight"
+    >
+      <ng-template let-job pTemplate="item">
+        <div
+          class="border-1 surface-border border-round m-2 text-center py-5 px-3 carousel-wrapper"
+        >
+          <div>
+            <h2 class="mb-1 job-title">{{ job.title }}</h2>
+            <p
+              id="description"
+              [innerHTML]="job.description"
+              class="mt-0 mb-3 job-description"
+            ></p>
+
+            <div class="car-buttons mt-5"></div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>

@@ -1,28 +1,163 @@
-<svg id="background" width='1728' height='1235' viewBox="0 0 1728 1235" fill='none' xmlns='http://www.w3.org/2000/svg'><g opacity='0.75' filter='url(#filter0_f_39_143)'><circle cy='1000' r='264' fill='url(#paint0_linear_39_143)'/></g><g opacity='0.65' filter='url(#filter1_f_39_143)'><circle cx='1720' cy='264' r='379' fill='url(#paint1_linear_39_143)'/></g><defs><filter id='filter0_f_39_143' x='-485' y='515' width='970' height='970' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'><feFlood flood-opacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='110.5' result='effect1_foregroundBlur_39_143'/></filter><filter id='filter1_f_39_143' x='1120' y='-336' width='1200' height='1200' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'><feFlood flood-opacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='110.5' result='effect1_foregroundBlur_39_143'/></filter><linearGradient id='paint0_linear_39_143' x1='196.5' y1='902' x2='-2.55853e-05' y2='1264' gradientUnits='userSpaceOnUse'><stop stop-color="var(--bttm-left-blur-1)"/><stop offset='1' stop-color="var(--bttm-left-blur-2)"/></linearGradient><linearGradient id='paint1_linear_39_143' x1='1720' y1='-115' x2='1720' y2='643' gradientUnits='userSpaceOnUse'><stop stop-color="var(--top-right-blur-1)"/><stop offset='1' stop-color="var(--top-right-blur-2)" /></linearGradient></defs></svg>     
-<div id="content">
-  <div class="header">
-    <h1>Quickstart Template</h1>
-    <div class="logo">
-      <img src="https://user-images.githubusercontent.com/43764894/223549637-2715c89d-a44e-42e0-8f6c-fa6246279658.png">
-    </div>
-    <h2>
-      This is a bare-bones Angular project that has everything you need to quickly deploy it to Netlify
-    </h2>
-    <div class="bttns">
-      <a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/angular-quickstart" class="bttn primary">Deploy to Netlify</a>
-      <a href="https://github.com/netlify-templates/angular-quickstart" class="bttn secondary">View Repo</a>
-    </div>
-  </div>
-  <div class="resource-list">
+<main>
+  <nav #nav>
     <ul>
-      <li>
-        <a href="https://www.netlify.com/tags/angular/">Netlify Blog: Angular posts</a>
-      <li>
-        <a href="https://docs.netlify.com/">Netlify Docs</a>
-      </li>
-      <li>
-        <a href="https://angular.io/">Angular Docs</a>
-      </li>
+      <li><a (click)="scrollToSection(aboutSection)">About Me</a></li>
+      <li><a (click)="scrollToSection(experienceSection)">Experience</a></li>
+      <li><a (click)="scrollToSection(finalSection)">What's Next?</a></li>
     </ul>
+  </nav>
+  <div class="main-wrapper">
+    <!-- LANDING PAGE SECTION-->
+    <section class="landing-page">
+      <div class="landing-page__content">
+        <img class="landing-page_img" src="../assets/Group 1.png" />
+        <div class="landing-page__wrapper">
+          <div class="landing-page__text">
+            <h1 class="landing-page__title">Susanna Capacchione</h1>
+            <h2 class="landing-page__subtitle">UX ENGINEER</h2>
+            <p class="landing-page__body">
+              Hello! My name is Susanna, but everyone calls me Sue. <br />
+              I’m a front end developer who discovered the beauty of UX design
+              and decided to fill the gap between the two! <br />
+              <br />As a front-end developer with a passion for UX-design, I
+              bring a unique perspective to every project I work on. I'm always
+              looking to expand my skill set and challenge myself, whether
+              through coaching others or exploring new technologies. And yes, I
+              also have a penchant for cracking weird jokes from time to time.
+            </p>
+          </div>
+          <div class="landing-page__actions">
+            <button class="glow-on-hover download-cv-button">
+              Download my CV
+            </button>
+            <button class="glow-on-hover contact-button" (click)="sendEmail()">
+              Contact
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section #aboutSection class="about-me">
+      <div class="about-me__content">
+        <img class="about-me__img" src="../assets/Blob3.png" />
+        <div class="about-me__wrapper">
+          <div class="about-me__text">
+            <h1 class="about-me__title">About me</h1>
+            <h2 class="about-me__subtitle">Who am I?</h2>
+            <p class="about-me__body">
+              Wow... that sounds more like the beginning of an existential
+              crisis, doesn’t it? <br />Although I still have to figure out my
+              role in the universe and my divine mission, I definitely have an
+              idea about who I am in my daily life. <br /><br />I’m Susanna, I’m
+              Italian and I don’t like tomatoes. I like to think of myself as a
+              curious and creative person. I like to constantly learn, and if
+              I’m passionate about something, I’ll go ballistic about it.
+              <br /><br />I have different passions. First and foremost,
+              <span class="highlight-word--blue">music</span>: I like to make
+              beats on Ableton, I scratch (yes, that weird sound that you might
+              or might not have heard in some hip hop tracks), I used to DJ, I
+              collect vinyl and I’m always scavenging to find the perfect
+              sample. <br /><br />
+              <span class="highlight-word--blue">Sports</span>: Yelling “mamma
+              mia!’ doesn’t always take the stress away, sometimes I need a
+              better outlet, and that’s why most of the time you can find me
+              boxing or just simply working out at the gym. <br /><br />
+              <span class="highlight-word--blue">Stand-up comedy</span>: I
+              literally listen to Bill Burr’s podcast every day. But he’s not
+              the only one occupying a special place in my heart. There’s also
+              Dave Chappelle, Patrice O’ Neal, Deon Cole, Louis C.K. and many
+              more. The darker the humor, the better.
+            </p>
+          </div>
+          <div class="about-me__actions">
+            <button
+              class="glow-on-hover music-button"
+              (click)="redirectToSoundCloud()"
+              target="_blank"
+            >
+              Listen to my music
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section #experienceSection class="experience">
+      <div class="experience__title-wrapper">
+        <h1 class="experience__title">Experience</h1>
+      </div>
+      <div class="experience__wrapper">
+        <img class="experience__img" src="../assets/Blob4.png" />
+        <div style="color: white" class="experience__text">
+          <div class="experience-carousel">
+            <app-vertical-carousel></app-vertical-carousel>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL PAGE SECTION -->
+
+    <section #finalSection class="final-page">
+      <div class="final-page__content">
+        <img class="final-page__img" src="../assets/Blob5.png" />
+        <div class="final-page__wrapper">
+          <div class="final-page__text">
+            <h1 class="final-page__title">What I’m looking for</h1>
+            <h2 class="final-page__subtitle">What's Next</h2>
+            <p class="final-page__body">
+              I am eager to thrive in a dynamic and multicultural workplace,
+              where fluent English communication and open collaboration are not
+              just encouraged, but actively practiced. An engaging and playful
+              user interface for the product I'll be working on is something
+              that I aspire to, as I look forward to exploring new technologies
+              and libraries to enhance its functionality. I believe that a
+              jovial and relaxed work environment, where colleagues can share a
+              laugh and not take themselves too seriously, can lead to a more
+              productive and fulfilling experience for all. <br /><br />In
+              essence, I am on a quest to discover my unicorn—a workplace that
+              embraces open communication, fosters idea sharing, promotes
+              personal growth, and gets things done. I seek an environment where
+              individuals aren't confined by labels, but rather encouraged to
+              evolve and flourish.
+            </p>
+          </div>
+          <div class="final-page__actions"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section #finalSection class="final-page">
+      <div class="final-page__content">
+        <img class="final-page__img" src="../assets/Blob5.png" />
+        <div class="final-page__wrapper">
+          <div class="final-page__text">
+            <h1 class="final-page__title">What I’m looking for</h1>
+            <h2 class="final-page__subtitle">What's next?</h2>
+            <p class="final-page__body">
+              I am eager to thrive in a dynamic and multicultural workplace,
+              where fluent English communication and open collaboration are not
+              just encouraged, but actively practiced. An engaging and playful
+              user interface for the product I'll be working on is something
+              that I aspire to, as I look forward to exploring new technologies
+              and libraries to enhance its functionality. I believe that a
+              jovial and relaxed work environment, where colleagues can share a
+              laugh and not take themselves too seriously, can lead to a more
+              productive and fulfilling experience for all. <br /><br />In
+              essence, I am on a quest to discover my unicorn—a workplace that
+              embraces open communication, fosters idea sharing, promotes
+              personal growth, and gets things done. I seek an environment where
+              individuals aren't confined by labels, but rather encouraged to
+              evolve and flourish.
+            </p>
+          </div>
+          <div class="final-page__actions"></div>
+        </div>
+      </div>
+    </section> -->
   </div>
-</div>
+</main>
+
+<router-outlet></router-outlet>
